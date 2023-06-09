@@ -1,0 +1,3717 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 40px;
+  color: #a3eee9;
+}
+
+h2 {
+  font-size: 30px;
+  color: #a3eee9;
+}
+
+h3 {
+  font-size: 24px;
+  color: #a3eee9;
+}
+
+h4 {
+  color: White;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  color: #8b95a6;
+  font-size: 14px;
+}
+
+body {
+  font-size: 12px;
+  font-family: "Poppins", sans-serif;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+button {
+  margin-top: 30px;
+  padding: 0.8em 3em 0.8em 3em;
+  place-self: center;
+  border-radius: 20px;
+  font-size: 14px;
+  color: black;
+  border: none;
+  background-color: #8cefe9;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  /* border: 1px solid red; */
+  background: rgba(0, 0, 0, 0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 0px !important;
+  z-index: 10;
+}
+
+nav .mobile {
+  display: flex;
+  place-items: center;
+  place-content: space-between;
+  /* border: 1px solid red; */
+  width: 100%;
+  padding-inline: 60px;
+  padding-block: 10px;
+}
+
+nav .mobile .logo {
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
+
+nav .mobile img {
+  width: 90px;
+  animation: twist 5s infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes twist {
+  0% {
+    transform: rotate(0deg) skew(0deg, 0deg);
+  }
+  25% {
+    transform: rotate(45deg) skew(0deg, -15deg);
+  }
+  50% {
+    transform: rotate(0deg) skew(0deg, 0deg);
+  }
+  75% {
+    transform: rotate(-45deg) skew(0deg, 15deg);
+  }
+  100% {
+    transform: rotate(-45deg) skew(0deg, 0deg);
+  }
+}
+
+nav .mobile h4 {
+  color: white;
+  font-size: 35px;
+  margin-left: 10px;
+}
+
+nav .mobile .dropdown {
+  /* border: 1px solid red; */
+  width: 6.5em;
+  height: 5.5em;
+  position: relative;
+  place-items: center;
+  place-content: center;
+  cursor: pointer;
+}
+
+nav .mobile .dropdown::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #8cefe9;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+nav .mobile .dropdown i {
+  font-size: 50px;
+  margin-top: 0.15em;
+  margin-left: 0.32em;
+}
+
+nav .mobile .dropdown-items{
+  display: flex;
+  opacity: 0;
+  padding-block: 20px;
+  padding-inline: 30px;
+  gap: 30px;
+  background-color: #f7f7f7;
+  color: #0b1321;
+  border-radius: 20px;
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 170px;
+}
+
+nav .mobile .dropdown-items a{
+  font-size: 16px;
+  color: #0b1321;
+
+}
+
+nav .mobile .dropdown-items a:hover{
+  color: #6d717a;
+}
+
+
+.s0-mobile {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100%;
+}
+
+.s1-mobile {
+  width: 100%;
+  height: 100vh;
+  background: url(./images/desktop\ background.jpg);
+  background-color: rgb(0, 0, 0, 0.15);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: 0px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  user-select: none;
+}
+
+.s1-mobile::-webkit-scrollbar {
+  display: none;
+}
+
+.s1-mobile .cont1 {
+  margin-top: 200px;
+  margin-right: 200px;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  place-self: end;
+}
+
+.s1-mobile .cont1 h1 {
+  /* border: 1px solid red; */
+  line-height: 80px;
+  font-size: 85px;
+  font-weight: 100;
+}
+
+.s1-mobile .cont1 p {
+  /* border: 1px solid red; */
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: start;
+  line-height: 25px;
+  line-height: 25px;
+}
+
+.s1-mobile .cont1 button {
+  margin-top: 30px;
+  padding: 1em 3.5em 1em 3.5em;
+  place-self: start;
+  border-radius: 40px;
+  font-size: 18px;
+  color: black;
+  border: none;
+  background-color: #8cefe9;
+  cursor: pointer;
+  margin-right: 240px;
+  border: 2.5px solid transparent;
+  transition: background-color ease 0.2s;
+}
+
+.s1-mobile .cont1 button:hover {
+  border-color: white !important;
+  background-color: transparent;
+  color: white;
+}
+
+.s1-mobile .cont2 {
+  /* border: 1px solid red; */
+  margin-top: 250px;
+  margin-right: 150px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  place-self: end;
+  place-content: end;
+  place-items: end;
+}
+
+.s1-mobile .cont2 h2 {
+  font-weight: 100;
+  place-self: start;
+  font-size: 35px;
+  /* border: 1px solid red; */
+}
+
+.s1-mobile .cont2 .card {
+  display: flex;
+  padding-block: 20px;
+  flex-direction: column;
+  margin-top: 15px;
+  border: 1.5px solid rgba(99, 109, 125, 0.4);
+  border-radius: 20px;
+  background-color: rgba(40, 52, 66, 0.3);
+  place-self: end;
+}
+
+.s1-mobile .cont2 .card .video {
+  /* border: 1px solid green; */
+  display: flex;
+  place-self: center;
+  height: 15em;
+  width: 90%;
+  user-select: none;
+  pointer-events: none;
+  border-radius: 10px;
+}
+
+.s1-mobile .cont2 .card .video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.s1-mobile .cont2 .card h3 {
+  /* border: 1px solid red; */
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 30px;
+  color: white;
+  font-weight: 500;
+  width: 68%;
+}
+
+.s1-mobile .cont2 .card p {
+  /* border: 1px solid red; */
+  margin-top: 10px;
+  font-size: 18px;
+  margin-inline: 20px;
+  place-self: start;
+  text-align: start;
+}
+
+.s1-mobile .cont2 .card button {
+  margin-top: 30px;
+  margin-left: 25px;
+  place-self: start;
+  padding: 20px 60px 20px 60px;
+  border-radius: 30px;
+  border: 2.5px solid #838e9e;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.s1-mobile .cont2 .card button:hover {
+  background-color: #8cefe9;
+  border-color: #8cefe9;
+  color: black;
+}
+
+.s1-mobile .cont3 {
+  margin-top: 300px;
+  margin-bottom: 50px;
+  margin-right: 203px;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  place-self: end;
+  width: 26%;
+}
+
+.s1-mobile .cont3 .img {
+  /* border: 1px solid red; */
+  width: 31%;
+  height: 120px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 0px;
+}
+
+.s1-mobile .cont3 .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  place-self: center;
+  border-radius: 5px;
+}
+
+.s1-mobile .cont3 h2 {
+  /* border: 1px solid rebeccapurple; */
+  margin-top: 30px;
+  place-self: start;
+  text-align: start;
+  font-size: 30px;
+  font-weight: 100;
+  width: 90%;
+  line-height: 35px;
+}
+
+.s1-mobile .cont3 p {
+  margin-top: 20px;
+  place-self: start;
+  text-align: start;
+  font-size: 18px;
+  line-height: 30px;
+  word-wrap: break-word;
+}
+
+.s2-mobile {
+  /* border: 1px solid red; */
+  padding-top: 60px;
+  padding-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  width: 100%;
+  background: url(./images/dragon\ head.jpg);
+  background-color: rgb(0, 0, 0, 0.3);
+  background-position: center;
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  user-select: none;
+}
+
+.s2-mobile::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(1px);
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+.s2-mobile h2 {
+  font-weight: 100;
+  font-size: 35px;
+  position: relative;
+}
+
+.s2-mobile .all-cards {
+  padding-top: 40px;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  width: 84%;
+  flex-wrap: wrap;
+}
+
+.s2-mobile .card1 {
+  margin-top: 0px;
+  width: 32%;
+  /* border: 1px solid red; */
+  border-radius: 20px;
+  position: relative;
+  padding: 20px;
+  padding-bottom: 30px !important;
+  background-color: rgb(35, 60, 77, 0.5);
+  box-shadow: rgb(0, 0, 0, 0.2) 0px 0px 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.s2-mobile .card1 .overlay {
+  /* border: 1px solid red; */
+  width: 100%;
+  min-height: 25em;
+  background: url(./images/the\ unknown\ rpg\ bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.s2-mobile .card1 .overlay::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.s2-mobile .card1 .overlay .content {
+  display: flex;
+  /* border: 1px solid green; */
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  place-items: center;
+  place-content: center;
+  border-radius: 20px;
+}
+
+.s2-mobile .card1 .overlay .content .img {
+  place-self: center;
+  width: 120px;
+  height: 120px;
+  background-color: white;
+  padding: 3px;
+  /* border: 1px solid red; */
+  border-radius: 20px;
+}
+
+.s2-mobile .card1 .overlay .content img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.s2-mobile .card1 .overlay .content h4 {
+  font-size: 25px;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.s2-mobile .card1 .overlay .content p {
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: white;
+  margin-top: 5px;
+}
+
+.s2-mobile .card1 h5 {
+  margin-top: 20px;
+  /* border: 1px solid red; */
+  width: 95%;
+  place-self: center;
+  text-align: center;
+  line-height: 25px;
+  font-size: 18px;
+  color: #838e9e;
+  font-weight: 100;
+  word-wrap: break-word;
+}
+
+.s2-mobile .card1 button {
+  margin-top: 20px !important;
+  padding: 1em 3.5em 1em 3.5em;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 100;
+  border: 2.5px solid transparent;
+  transition: background-color ease 0.2s;
+}
+
+.s2-mobile .card1 button:hover {
+  background: transparent;
+  color: white;
+  border: 2.5px solid white;
+}
+
+.s2-mobile .card2,
+.card3 {
+  margin-top: 0px;
+}
+
+.s2-mobile .card2 .overlay {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 20em;
+  background: url(./images/dragon\ lair\ background.jpg);
+  background-size: cover;
+  background-position-y: -3px;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.s2-mobile .card3 .overlay {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 20em;
+  background: url(./images/Atactic\ background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.s2-mobile .card3 {
+  margin-top: 0px;
+}
+
+.s2-mobile .about-us {
+  margin-left: 115px;
+  padding-top: 180px;
+  width: 39%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  place-self: start;
+  position: relative;
+}
+
+.s2-mobile .about-us h1 {
+  font-weight: 100;
+}
+.s2-mobile .about-us p {
+  /* border: 1px solid red; */
+  margin-top: 10px;
+  word-wrap: break-word;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.s2-mobile .about-us button {
+  margin-top: 30px;
+  font-size: 18px;
+  padding: 0.9em 2.5em 0.9em 2.5em;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  border: 1.5px solid rgb(255, 255, 255, 0);
+  place-self: start !important;
+}
+
+.s2-mobile .about-us button:hover {
+  background: transparent !important;
+  border: 1.5px solid white;
+  color: white;
+}
+
+.s3-mobile {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  position: relative;
+  background: #0b1321;
+  user-select: none;
+}
+
+.s3-mobile .cont0 {
+  /* border: 1px solid red; */
+  display: flex;
+  height: 190vh;
+  position: relative;
+}
+
+.s3-mobile .cont0::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: url(./images/glow\ orb.png);
+  background-color: rgb(0, 0, 0, 0.3);
+  background-blend-mode: darken;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.s3-mobile .cont0 .video {
+  width: 60%;
+  height: fit-content;
+  display: flex;
+  position: sticky;
+  top: 0;
+  /* border: 1px solid green; */
+  place-content: center;
+}
+
+.s3-mobile .cont0 .video img {
+  /* border: 1px solid blue; */
+  width: 95%;
+  height: 45%;
+  object-fit: contain;
+  object-position: center;
+  position: relative;
+}
+
+.s3-mobile .cont0 .txt {
+  display: flex;
+  width: 23%;
+  height: fit-content;
+  flex-direction: column;
+  /* border: 1px solid green; */
+  margin-left: 80px;
+  position: sticky;
+  top: 0;
+  margin-bottom: 130px;
+}
+
+.s3-mobile .cont0 .txt h1 {
+  margin-top: 30px;
+  font-size: 55px;
+  line-height: 60px;
+  font-weight: 100;
+}
+
+.s3-mobile .cont0 .txt p {
+  margin-top: 20px;
+  /* border: 1px solid red; */
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.s3-mobile .cont0 .txt button {
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+  padding: 0.8em 2.5em 0.8em 2.5em;
+  font-size: 18px;
+  border: 2.5px solid transparent;
+  border-radius: 30px;
+  place-self: start;
+}
+
+.s3-mobile .cont0 .txt button:hover {
+  background: transparent !important;
+  border-color: white;
+  color: white;
+}
+
+.s3-mobile .work-mobile {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+  padding-block: 50px;
+  padding-left: 120px;
+  place-content: center;
+  width: 85%;
+  height: 75vh;
+  place-self: center;
+  border-radius: 20px;
+  background: url(./images/work\ with\ us.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.s3-mobile .work-mobile::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(0, 0, 0, 0);
+  position: absolute;
+  border-radius: 20px;
+  backdrop-filter: blur(1px);
+  z-index: -0;
+}
+
+.s3-mobile .work-mobile h1 {
+  /* border: 1px solid red; */
+  font-weight: 100;
+  font-size: 50px;
+  position: relative;
+}
+
+.s3-mobile .work-mobile p {
+  /* border: 1px solid red; */
+  width: 34%;
+  font-size: 18px;
+  line-height: 30px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.s3-mobile .work-mobile button {
+  position: relative;
+  padding: 1em 1.5em 1em 1.5em;
+  transition: background-color 0.3s ease;
+  border: 2.5px solid transparent;
+  place-self: start;
+  font-size: 18px;
+  border-radius: 30px;
+}
+
+.s3-mobile .work-mobile button:hover {
+  background: transparent !important;
+  border: 2.5px solid white;
+  color: white;
+}
+
+.s3-mobile .newsletter-mobile {
+  padding-top: 100px;
+  /* border: 1px solid red; */
+  width: 100%;
+  background: #0b1321;
+  display: flex;
+  flex-direction: column;
+}
+
+.s3-mobile .newsletter-mobile h2 {
+  font-weight: 100;
+  place-self: center;
+}
+
+.s3-mobile .newsletter-mobile p {
+  /* border: 1px solid red; */
+  margin-top: 10px;
+  width: 90%;
+  font-size: 18px;
+  place-self: center;
+  text-align: center;
+  line-height: 25px;
+}
+
+.s3-mobile .newsletter-mobile input {
+  margin-top: 30px;
+  font-size: 18px;
+  place-self: center;
+  min-width: 40%;
+  padding-block: 1.2em;
+  text-align: center;
+  border: 2.5px solid #838e9e;
+  border-radius: 20px;
+  background: transparent;
+  outline: none;
+  color: #838e9e;
+  border-radius: 30px;
+}
+
+.s3-mobile .newsletter-mobile input:focus {
+  background: rgb(131, 142, 158, 0.3);
+  border-color: #8cefe9;
+}
+
+.s3-mobile .newsletter-mobile input:hover {
+  background: rgb(131, 142, 158, 0.3);
+  border-color: #8cefe9;
+}
+
+.s3-mobile .newsletter-mobile h5 {
+  scale: 0;
+  margin-top: 10px;
+  font-size: 16px;
+  color: rgb(7, 159, 7);
+  place-self: center;
+  font-weight: 100;
+}
+
+.s3-mobile .newsletter-mobile button {
+  min-width: 20%;
+  padding-block: 1.2em;
+  border-radius: 30px;
+  font-size: 18px;
+  transition: background-color ease 0.3s;
+}
+
+.s3-mobile .newsletter-mobile button:hover {
+  background: white !important;
+  color: black !important;
+}
+
+.s3-mobile .footer {
+  margin-top: 60px;
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.s3-mobile .footer::before {
+  content: "";
+  width: 90%;
+  height: 2px;
+  background-color: #838e9e;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.s3-mobile .footer .cont1 {
+  display: none !important;
+  /* border: 1px solid red; */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  place-content: center;
+}
+
+.s3-mobile .footer .cont1 h3 {
+  font-size: 20px;
+}
+
+.s3-mobile .footer .cont1 p {
+  margin-top: 10px;
+  width: 80%;
+  text-align: center;
+  word-wrap: break-word;
+  /* border: 1px solid red; */
+  font-size: 14px;
+}
+
+.s3-mobile .footer .other-cont {
+  /* border: 1px solid red; */
+  margin-top: 40px;
+  display: flex;
+  gap: 150px;
+  width: 90%;
+  place-self: center;
+}
+
+.s3-mobile .footer .other-cont .desktop-f {
+  margin-top: 0px;
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  place-items: start;
+  place-content: start;
+}
+
+.s3-mobile .footer .other-cont .desktop-f h3 {
+  margin-top: 10px;
+  color: #8cefe9;
+}
+
+.s3-mobile .footer .other-cont .desktop-f p {
+  margin-top: 20px;
+  line-height: 25px;
+}
+
+.s3-mobile .footer .cont2 {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  place-content: center;
+}
+
+.s3-mobile .footer .cont2 h3 {
+  color: #838e9e;
+  font-size: 25px;
+  font-weight: 500;
+  place-self: start;
+}
+
+.s3-mobile .footer .cont2 p {
+  margin-top: 2px;
+  width: 100%;
+  word-wrap: break-word;
+  cursor: pointer;
+  /* border: 1px solid red; */
+  font-size: 14px;
+}
+
+.s3-mobile .footer .cont2 .first-p {
+  margin-top: 10px;
+}
+
+.s3-mobile .footer h5 {
+  /* border: 1px solid red; */
+  width: 90%;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  font-size: 14px;
+  font-weight: 100;
+  color: #838e9e;
+  place-self: center;
+}
+
+@media (width <= 900px) {
+  button {
+    margin-top: 30px;
+    padding: 0.8em 3em 0.8em 3em;
+    place-self: center;
+    border-radius: 20px;
+    font-size: 14px;
+    color: black;
+    border: none;
+    background-color: #8cefe9;
+    cursor: pointer;
+    margin-right: 0px;
+    border: 2.5px solid transparent;
+    transition: background-color ease 0.2s;
+  }
+
+  nav {
+    display: flex;
+    /* border: 1px solid red; */
+    height: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 5px;
+    z-index: 10;
+    place-items: center;
+  }
+
+  nav .mobile {
+    display: flex;
+    place-items: center;
+    place-content: space-between;
+    /* border: 1px solid red; */
+    width: 100%;
+    padding-inline: 20px;
+  }
+
+  nav .mobile .logo {
+    display: flex;
+    place-items: center;
+    place-content: center;
+  }
+
+  nav .mobile img {
+    width: 60px;
+    animation: twist 5s infinite;
+    animation-direction: alternate-reverse;
+  }
+
+  nav .mobile h4 {
+    color: white;
+    font-size: 20px;
+    margin-left: 0px;
+  }
+
+  nav .mobile .dropdown {
+    /* border: 1px solid red; */
+    width: 5em;
+    height: 4.5em;
+    position: relative;
+    place-items: center;
+    place-content: center;
+  }
+
+  nav .mobile .dropdown::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #8cefe9;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: -1;
+  }
+
+  nav .mobile .dropdown i {
+    font-size: 35px;
+    margin-top: 0.27em;
+    margin-left: 0.35em;
+    cursor: pointer;
+  }
+
+  nav .mobile .dropdown-items{
+    display: flex;
+    opacity: 0;
+    padding-block: 20px;
+    padding-inline: 20px;
+    gap: 20px;
+    background-color: #f7f7f7;
+    color: #0b1321;
+    border-radius: 20px;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100px;
+  }
+  
+  nav .mobile .dropdown-items a{
+    font-size: 16px;
+    color: #0b1321;
+  
+  }
+  
+  nav .mobile .dropdown-items a:hover{
+    color: #6d717a;
+  }
+
+  .s0-mobile {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+  }
+
+  .s1-mobile {
+    width: 100%;
+    height: 100vh;
+    background: url(./images/martian\ quest\ image\ tablet.jpg);
+    background-color: rgb(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -0px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    user-select: none;
+  }
+
+  .s1-mobile::-webkit-scrollbar {
+    display: none;
+  }
+
+  .s1-mobile .cont1 {
+    margin-top: 150px;
+    margin-right: 100px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    place-self: end;
+    place-items: start;
+  }
+
+  .s1-mobile .cont1 h1 {
+    /* border: 1px solid red; */
+    padding-top: 0px;
+    line-height: 50px;
+    font-size: 55px;
+    font-weight: 100;
+  }
+
+  .s1-mobile .cont1 p {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: start;
+    line-height: 25px;
+    word-break: wrap;
+  }
+
+  .s1-mobile .cont1 button {
+    margin-top: 30px;
+    padding: 0.8em 3em 0.8em 3em;
+    place-self: start;
+    border-radius: 20px;
+    font-size: 14px;
+    color: black;
+    border: none;
+    background-color: #8cefe9;
+    cursor: pointer;
+    margin-right: 0px;
+    border: 2.5px solid transparent;
+    transition: background-color ease 0.2s;
+  }
+
+  .s1-mobile .cont1 button:hover {
+    border-color: white !important;
+    background-color: transparent;
+    color: white;
+  }
+
+  .s1-mobile .cont2 {
+    /* border: 1px solid red; */
+    margin-top: 300px;
+    margin-right: 85px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    place-self: end;
+    place-content: start;
+    place-items: start;
+  }
+
+  .s1-mobile .cont2 h2 {
+    font-weight: 100;
+    font-size: 35px;
+    /* border: 1px solid red; */
+    place-self: start;
+  }
+
+  .s1-mobile .cont2 .card {
+    display: flex;
+    padding-block: 20px;
+    flex-direction: column;
+    margin-top: 20px;
+    border: 1.5px solid rgba(99, 109, 125, 0.4);
+    border-radius: 20px;
+    background-color: rgba(32, 39, 48, 0.5);
+  }
+
+  .s1-mobile .cont2 .card .video {
+    /* border: 1px solid green; */
+    display: flex;
+    place-self: center;
+    height: 15em;
+    width: 90%;
+    user-select: none;
+    pointer-events: none;
+    border-radius: 10px;
+  }
+
+  .s1-mobile .cont2 .card .video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+  }
+
+  .s1-mobile .cont2 .card h3 {
+    /* border: 1px solid red; */
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+    color: white;
+    font-weight: 500;
+    width: fit-content;
+    place-self: start;
+  }
+
+  .s1-mobile .cont2 .card p {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    font-size: 16px;
+    margin-inline: 20px;
+    place-self: start;
+    text-align: start;
+  }
+
+  .s1-mobile .cont2 .card button {
+    margin-top: 30px;
+    margin-left: 25px;
+    padding: 12px 40px 12px 40px;
+    border-radius: 20px;
+    border: 2px solid #838e9e;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    place-self: start;
+  }
+
+  .s1-mobile .cont2 .card button:hover {
+    background-color: #8cefe9;
+    border-color: #8cefe9;
+    color: black;
+  }
+
+  .s1-mobile .cont3 {
+    margin-top: 300px;
+    margin-bottom: 350px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    place-self: end;
+    place-items: start;
+    width: 37.3%;
+  }
+
+  .s1-mobile .cont3 .img {
+    /* border: 1px solid red; */
+    width: 28%;
+    height: 85px;
+    border-radius: 15px;
+    background-color: white;
+    padding: 2px;
+  }
+
+  .s1-mobile .cont3 .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    place-self: center;
+    border-radius: 15px;
+  }
+
+  .s1-mobile .cont3 h2 {
+    /* border: 1px solid rebeccapurple; */
+    margin-top: 15px;
+    place-self: start;
+    text-align: start;
+    font-size: 28px;
+    font-weight: 100;
+    width: 100%;
+    line-height: 30px;
+  }
+
+  .s1-mobile .cont3 p {
+    margin-top: 15px;
+    place-self: start;
+    text-align: start;
+    font-size: 14px;
+    line-height: 25px;
+    word-wrap: break-word;
+  }
+
+  .s2-mobile {
+    /* border: 1px solid red; */
+    padding-top: 30px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    width: 100%;
+    background: url(./images/dragon\ head.jpg);
+    background-color: rgb(0, 0, 0, 0.2);
+    background-position: center;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    user-select: none;
+  }
+
+  .s2-mobile::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1px);
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+
+  .s2-mobile h2 {
+    font-weight: 100;
+    font-size: 30px;
+    position: relative;
+  }
+
+  .s2-mobile .all-cards {
+    padding-top: 20px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    place-items: center;
+    width: 95%;
+    gap: 12px;
+  }
+
+  .s2-mobile .card1 {
+    margin-top: 0px;
+    width: 32%;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    position: relative;
+    padding: 20px;
+    padding-bottom: 25px !important;
+    background-color: rgb(35, 60, 77, 0.8);
+    box-shadow: rgb(0, 0, 0, 0.2) 0px 0px 2px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s2-mobile .card1 .overlay {
+    /* border: 1px solid red; */
+    width: 100%;
+    min-height: 17em;
+    background: url(./images/the\ unknown\ rpg\ bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s2-mobile .card1 .overlay::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    z-index: 0;
+  }
+
+  .s2-mobile .card1 .overlay .content {
+    display: flex;
+    /* border: 1px solid green; */
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    place-content: center;
+    border-radius: 20px;
+  }
+
+  .s2-mobile .card1 .overlay .content .img {
+    place-self: center;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    padding: 3px;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+  }
+
+  .s2-mobile .card1 .overlay .content img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .s2-mobile .card1 .overlay .content h4 {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+
+  .s2-mobile .card1 .overlay .content p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: white;
+    margin-top: 0px;
+  }
+
+  .s2-mobile .card1 h5 {
+    margin-top: 10px;
+    /* border: 1px solid red; */
+    width: 95%;
+    place-self: center;
+    text-align: center;
+    line-height: 23px;
+    font-size: 14px;
+    color: #838e9e;
+    font-weight: 100;
+    word-wrap: break-word;
+  }
+
+  .s2-mobile .card1 button {
+    margin-top: 20px !important;
+    padding: 0.8em 2.5em 0.8em 2.5em;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 100;
+    border: 2px solid transparent;
+    transition: background-color ease 0.2s;
+  }
+
+  .s2-mobile .card1 button:hover {
+    background: transparent;
+    color: white;
+    border: 2.5px solid white;
+  }
+
+  .s2-mobile .card2,
+  .card3 {
+    margin-top: 0px;
+  }
+
+  .s2-mobile .card2 .overlay {
+    /* border: 1px solid red; */
+    width: 100%;
+    max-height: 17em;
+    background: url(./images/dragon\ lair\ background.jpg);
+    background-size: cover;
+    background-position-y: -3px;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s2-mobile .card3 .overlay {
+    /* border: 1px solid red; */
+    width: 100%;
+    max-height: 17em;
+    background: url(./images/Atactic\ background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s2-mobile .card3 {
+    margin-top: 0px;
+  }
+
+  .s2-mobile .about-us {
+    margin-left: 0px;
+    padding-top: 80px;
+    width: 60%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    place-items: center;
+    position: relative;
+  }
+
+  .s2-mobile .about-us h1 {
+    font-weight: 100;
+  }
+  .s2-mobile .about-us p {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    word-wrap: break-word;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+  }
+
+  .s2-mobile .about-us button {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 0.8em 2em 0.8em 2em;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    border: 1.5px solid rgb(255, 255, 255, 0);
+    place-self: center !important;
+  }
+
+  .s2-mobile .about-us button:hover {
+    background: transparent !important;
+    border: 1.5px solid white;
+    color: white;
+  }
+
+  .s3-mobile {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    position: relative;
+    background: #0b1321;
+    user-select: none;
+  }
+
+  .s3-mobile .cont0 {
+    /* border: 1px solid red; */
+    display: flex;
+    height: 150vh;
+    position: relative;
+  }
+
+  .s3-mobile .cont0::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: url(./images/glow\ orb.png);
+    background-color: rgb(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .s3-mobile .cont0 .video {
+    width: 50%;
+    padding-top: 18vh;
+    padding-bottom: 287px;
+    height: fit-content;
+    display: flex;
+    position: sticky;
+    top: 0;
+    /* border: 1px solid green; */
+    place-content: center;
+  }
+
+  .s3-mobile .cont0 .video img {
+    /* border: 1px solid blue; */
+    width: 95%;
+    height: 45%;
+    object-fit: contain;
+    object-position: center;
+    position: relative;
+  }
+
+  .s3-mobile .cont0 .txt {
+    display: flex;
+    width: 40%;
+    padding-top: 10vh;
+    padding-bottom: 215px;
+    margin-bottom: 0;
+    height: fit-content;
+    flex-direction: column;
+    /* border: 1px solid green; */
+    margin-left: 40px;
+    position: sticky;
+    top: 0;
+  }
+
+  .s3-mobile .cont0 .txt h1 {
+    margin-top: 30px;
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 100;
+  }
+
+  .s3-mobile .cont0 .txt p {
+    margin-top: 20px;
+    /* border: 1px solid red; */
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .s3-mobile .cont0 .txt button {
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+    padding: 0.8em 2.5em 0.8em 2.5em;
+    font-size: 18px;
+    border: 2.5px solid transparent;
+    border-radius: 30px;
+    place-self: start;
+  }
+
+  .s3-mobile .cont0 .txt button:hover {
+    background: transparent !important;
+    border-color: white;
+    color: white;
+  }
+
+  .s3-mobile .work-mobile {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    padding-block: 50px;
+    padding-left: 40px;
+    place-content: center;
+    width: 90%;
+    height: fit-content;
+    place-self: center;
+    border-radius: 20px;
+    background: url(./images/work\ with\ us.jpg);
+    background-position-x: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .s3-mobile .work-mobile::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0, 0.3);
+    position: absolute;
+    border-radius: 20px;
+    backdrop-filter: blur(1.2px);
+    z-index: -0;
+  }
+
+  .s3-mobile .work-mobile h1 {
+    /* border: 1px solid red; */
+    font-weight: 100;
+    font-size: 50px;
+    position: relative;
+  }
+
+  .s3-mobile .work-mobile p {
+    /* border: 1px solid red; */
+    width: 50%;
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  .s3-mobile .work-mobile button {
+    position: relative;
+    padding: 0.8em 1.5em 0.8em 1.5em;
+    transition: background-color 0.3s ease;
+    border: 2px solid transparent;
+    place-self: start;
+    font-size: 18px;
+    border-radius: 30px;
+  }
+
+  .s3-mobile .work-mobile button:hover {
+    background: transparent !important;
+    border: 2px solid white;
+    color: white;
+  }
+
+  .s3-mobile .newsletter-mobile {
+    padding-top: 40px;
+    /* border: 1px solid red; */
+    width: 100%;
+    background: #0b1321;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s3-mobile .newsletter-mobile h2 {
+    font-weight: 100;
+    place-self: center;
+  }
+
+  .s3-mobile .newsletter-mobile p {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    width: 90%;
+    font-size: 14px;
+    place-self: center;
+    text-align: center;
+    line-height: 25px;
+  }
+
+  .s3-mobile .newsletter-mobile input {
+    margin-top: 30px;
+    font-size: 14px;
+    place-self: center;
+    min-width: 70%;
+    padding-block: 1.2em;
+    text-align: center;
+    border: 2.5px solid #838e9e;
+    border-radius: 20px;
+    background: transparent;
+    outline: none;
+    color: #838e9e;
+    border-radius: 30px;
+  }
+
+  .s3-mobile .newsletter-mobile input:focus {
+    background: rgb(131, 142, 158, 0.3);
+    border-color: #8cefe9;
+  }
+
+  .s3-mobile .newsletter-mobile input:hover {
+    background: rgb(131, 142, 158, 0.3);
+    border-color: #8cefe9;
+  }
+
+  .s3-mobile .newsletter-mobile h5 {
+    scale: 0;
+    margin-top: 10px;
+    font-size: 16px;
+    color: rgb(7, 159, 7);
+    place-self: center;
+    font-weight: 100;
+  }
+
+  .s3-mobile .newsletter-mobile button {
+    min-width: 50%;
+    padding-block: 0.8em;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: background-color ease 0.3s;
+  }
+
+  .s3-mobile .newsletter-mobile button:hover {
+    background: white !important;
+    color: black !important;
+  }
+
+  .s3-mobile .footer {
+    margin-top: 60px;
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s3-mobile .footer::before {
+    content: "";
+    width: 90%;
+    height: 2px;
+    background-color: #838e9e;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  .s3-mobile .footer .cont1 {
+    display: none !important;
+    /* border: 1px solid red; */
+    width: 80%;
+    margin-top: 20px;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    place-self: center;
+  }
+
+  .s3-mobile .footer .cont1 h3 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .s3-mobile .footer .cont1 p {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+    /* border: 1px solid red; */
+    font-size: 14px;
+  }
+
+  .s3-mobile .footer .other-cont {
+    /* border: 1px solid red; */
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 90%;
+    place-self: center;
+  }
+
+  .s3-mobile .footer .other-cont .desktop-f {
+    display: flex !important;
+    margin-top: 0px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    place-items: start;
+    place-content: start;
+  }
+
+  .s3-mobile .footer .other-cont .desktop-f h3 {
+    place-self: start;
+    margin-top: 0px;
+    color: #8cefe9;
+  }
+
+  .s3-mobile .footer .other-cont .desktop-f p {
+    margin-top: 10px;
+    line-height: 25px;
+  }
+
+  .s3-mobile .footer .cont2 {
+    margin-top: 0px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    place-items: start;
+    place-content: start;
+  }
+
+  .s3-mobile .footer .cont2 h3 {
+    /* border: 1px solid blue; */
+    color: #838e9e;
+    font-size: 25px;
+    font-weight: 500;
+    place-self: start;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .s3-mobile .footer .cont2 p {
+    margin-top: 2px;
+    width: fit-content;
+    word-wrap: break-word;
+    cursor: pointer;
+    /* border: 1px solid red; */
+    font-size: 14px;
+  }
+
+  .s3-mobile .footer .cont2 .first-p {
+    margin-top: 10px;
+  }
+
+  .s3-mobile .footer h5 {
+    /* border: 1px solid red; */
+    width: 90%;
+    margin-block: 30px;
+    font-size: 14px;
+    font-weight: 100;
+    color: #838e9e;
+    place-self: center;
+    text-align: center;
+  }
+}
+
+@media (width <= 700px) {
+  button {
+    margin-top: 30px;
+    padding: 0.8em 3em 0.8em 3em;
+    place-self: center;
+    border-radius: 20px;
+    font-size: 14px;
+    color: black;
+    border: none;
+    background-color: #8cefe9;
+    cursor: pointer;
+    margin-right: 0px;
+    border: 2.5px solid transparent;
+    transition: background-color ease 0.2s;
+  }
+
+  nav {
+    display: flex;
+    /* border: 1px solid red; */
+    height: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 5px;
+    z-index: 10;
+    place-items: center;
+  }
+
+  nav .mobile {
+    display: flex;
+    place-items: center;
+    place-content: space-between;
+    /* border: 1px solid red; */
+    width: 100%;
+    padding-inline: 20px;
+  }
+
+  nav .mobile .logo {
+    display: flex;
+    place-items: center;
+    place-content: center;
+  }
+
+  nav .mobile img {
+    width: 60px;
+    animation: twist 5s infinite;
+    animation-direction: alternate-reverse;
+  }
+
+  nav .mobile h4 {
+    color: white;
+    font-size: 20px;
+    margin-left: 0px;
+  }
+
+  nav .mobile .dropdown {
+    /* border: 1px solid red; */
+    width: 5em;
+    height: 4.5em;
+    position: relative;
+    place-items: center;
+    place-content: center;
+    z-index: 1;
+  }
+
+  nav .mobile .dropdown::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #8cefe9;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: -1;
+  }
+
+  nav .mobile .dropdown i {
+    font-size: 35px;
+    margin-top: 0.27em;
+    margin-left: 0.35em;
+    cursor: pointer;
+  }
+
+  nav .mobile .dropdown-items{
+    display: none;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    width: 100%;
+    opacity: 0;
+    padding-block: 180px;
+    padding-inline: 18px;
+    gap: 15px;
+    background-color: #343D4D;
+    border-radius: 0px;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 230%;
+    right: 0px;
+    z-index: -1;
+    height: 150vh;
+  }
+  
+  nav .mobile .dropdown-items a{
+    font-size: 20px;
+    color: #fff;
+    place-self: center;
+  
+  }
+  
+  nav .mobile .dropdown-items a:hover{
+    color: #8cefe9;
+  }
+
+  .s0-mobile {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+  }
+
+  .s1-mobile {
+    width: 100%;
+    height: 100vh;
+    background: url(./images/martian\ quest\ image\ tablet.jpg);
+    background-color: rgb(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -0px !important;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    user-select: none;
+  }
+
+  .s1-mobile::-webkit-scrollbar {
+    display: none;
+  }
+
+  .s1-mobile .cont1 {
+    margin-top: 80px !important;
+    margin-right: 100px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    place-self: end;
+    place-items: start;
+  }
+
+  .s1-mobile .cont1 h1 {
+    /* border: 1px solid red; */
+    padding-top: 0px;
+    line-height: 50px;
+    font-size: 50px;
+    font-weight: 100;
+  }
+
+  .s1-mobile .cont1 p {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: start;
+    line-height: 25px;
+    word-break: wrap;
+  }
+
+  .s1-mobile .cont1 button {
+    margin-top: 30px;
+    padding: 0.8em 3em 0.8em 3em;
+    place-self: start;
+    border-radius: 20px;
+    font-size: 14px;
+    color: black;
+    border: none;
+    background-color: #8cefe9;
+    cursor: pointer;
+    margin-right: 0px;
+    border: 2.5px solid transparent;
+    transition: background-color ease 0.2s;
+  }
+
+  .s1-mobile .cont1 button:hover {
+    border-color: white !important;
+    background-color: transparent;
+    color: white;
+  }
+
+  .s1-mobile .cont2 {
+    /* border: 1px solid red; */
+    margin-top: 200px !important;
+    margin-right: 85px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    place-self: end;
+    place-content: start;
+    place-items: start;
+  }
+
+  .s1-mobile .cont2 h2 {
+    font-weight: 100;
+    font-size: 35px;
+    /* border: 1px solid red; */
+    place-self: start;
+  }
+
+  .s1-mobile .cont2 .card {
+    display: flex;
+    padding-block: 20px;
+    flex-direction: column;
+    margin-top: 20px;
+    border: 1.5px solid rgba(99, 109, 125, 0.4);
+    border-radius: 20px;
+    background-color: rgba(32, 39, 48, 0.5);
+  }
+
+  .s1-mobile .cont2 .card .video {
+    /* border: 1px solid green; */
+    display: flex;
+    place-self: center;
+    height: 15em;
+    width: 90%;
+    user-select: none;
+    pointer-events: none;
+    border-radius: 10px;
+  }
+
+  .s1-mobile .cont2 .card .video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+  }
+
+  .s1-mobile .cont2 .card h3 {
+    /* border: 1px solid red; */
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+    color: white;
+    font-weight: 500;
+    width: fit-content;
+    place-self: start;
+  }
+
+  .s1-mobile .cont2 .card p {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    font-size: 16px;
+    margin-inline: 20px;
+    place-self: start;
+    text-align: start;
+  }
+
+  .s1-mobile .cont2 .card button {
+    margin-top: 30px;
+    margin-left: 25px;
+    padding: 12px 40px 12px 40px;
+    border-radius: 20px;
+    border: 2px solid #838e9e;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    place-self: start;
+  }
+
+  .s1-mobile .cont2 .card button:hover {
+    background-color: #8cefe9;
+    border-color: #8cefe9;
+    color: black;
+  }
+
+  .s1-mobile .cont3 {
+    margin-top: 200px !important;
+    margin-bottom: 80px !important;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    place-self: end;
+    place-items: start;
+    width: 37.3%;
+  }
+
+  .s1-mobile .cont3 .img {
+    /* border: 1px solid red; */
+    width: 28%;
+    height: 65px;
+    border-radius: 15px;
+    background-color: white;
+    padding: 2px;
+  }
+
+  .s1-mobile .cont3 .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    place-self: center;
+    border-radius: 15px;
+  }
+
+  .s1-mobile .cont3 h2 {
+    /* border: 1px solid rebeccapurple; */
+    margin-top: 15px;
+    place-self: start;
+    text-align: start;
+    font-size: 28px;
+    font-weight: 100;
+    width: 100%;
+    line-height: 30px;
+  }
+
+  .s1-mobile .cont3 p {
+    margin-top: 15px;
+    place-self: start;
+    text-align: start;
+    font-size: 14px;
+    line-height: 25px;
+    word-wrap: break-word;
+  }
+
+  .s2-mobile {
+    /* border: 1px solid red; */
+    padding-top: 30px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    width: 100%;
+    background: url(./images/dragon\ head.jpg);
+    background-color: rgb(0, 0, 0, 0.2);
+    background-position: center;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    user-select: none;
+  }
+
+  .s2-mobile::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1px);
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+
+  .s2-mobile h2 {
+    font-weight: 100;
+    font-size: 30px;
+    position: relative;
+  }
+
+  .s2-mobile .all-cards {
+    padding-top: 20px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    width: 95%;
+    gap: 20px;
+  }
+
+  .s2-mobile .card1 {
+    margin-top: 0px;
+    width: 60%;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    position: relative;
+    padding: 20px;
+    padding-bottom: 25px !important;
+    background-color: rgb(35, 60, 77, 0.8);
+    box-shadow: rgb(0, 0, 0, 0.2) 0px 0px 2px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s2-mobile .card1 .overlay {
+    /* border: 1px solid red; */
+    width: 100%;
+    min-height: 17em;
+    background: url(./images/the\ unknown\ rpg\ bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s2-mobile .card1 .overlay::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    z-index: 0;
+  }
+
+  .s2-mobile .card1 .overlay .content {
+    display: flex;
+    /* border: 1px solid green; */
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    place-content: center;
+    border-radius: 20px;
+  }
+
+  .s2-mobile .card1 .overlay .content .img {
+    place-self: center;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    padding: 3px;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+  }
+
+  .s2-mobile .card1 .overlay .content img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .s2-mobile .card1 .overlay .content h4 {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+
+  .s2-mobile .card1 .overlay .content p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: white;
+    margin-top: 0px;
+  }
+
+  .s2-mobile .card1 h5 {
+    margin-top: 10px;
+    /* border: 1px solid red; */
+    width: 95%;
+    place-self: center;
+    text-align: center;
+    line-height: 23px;
+    font-size: 14px;
+    color: #838e9e;
+    font-weight: 100;
+    word-wrap: break-word;
+  }
+
+  .s2-mobile .card1 button {
+    margin-top: 20px !important;
+    padding: 0.8em 2.5em 0.8em 2.5em;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 100;
+    border: 2px solid transparent;
+    transition: background-color ease 0.2s;
+  }
+
+  .s2-mobile .card1 button:hover {
+    background: transparent;
+    color: white;
+    border: 2.5px solid white;
+  }
+
+  .s2-mobile .card2,
+  .card3 {
+    margin-top: 0px;
+  }
+
+  .s2-mobile .card2 .overlay {
+    /* border: 1px solid red; */
+    width: 100%;
+    max-height: 17em;
+    background: url(./images/dragon\ lair\ background.jpg);
+    background-size: cover;
+    background-position-y: -3px;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s2-mobile .card3 .overlay {
+    /* border: 1px solid red; */
+    width: 100%;
+    max-height: 17em;
+    background: url(./images/Atactic\ background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s2-mobile .card3 {
+    margin-top: 0px;
+  }
+
+  .s2-mobile .about-us {
+    margin-left: 0px;
+    padding-top: 80px;
+    width: 60%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    place-items: center;
+    position: relative;
+  }
+
+  .s2-mobile .about-us h1 {
+    font-weight: 100;
+  }
+  .s2-mobile .about-us p {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    word-wrap: break-word;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+  }
+
+  .s2-mobile .about-us button {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 0.8em 2em 0.8em 2em;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    border: 1.5px solid rgb(255, 255, 255, 0);
+    place-self: center !important;
+  }
+
+  .s2-mobile .about-us button:hover {
+    background: transparent !important;
+    border: 1.5px solid white;
+    color: white;
+  }
+
+  .s3-mobile {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    position: relative;
+    background: #0b1321;
+    user-select: none;
+  }
+
+  .s3-mobile .cont0 {
+    /* border: 1px solid red; */
+    height: fit-content;
+    padding-bottom: 40px !important;
+    display: flex;
+    position: relative;
+  }
+
+  .s3-mobile .cont0::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: url(./images/glow\ orb.png);
+    background-color: rgb(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .s3-mobile .cont0 .video {
+    width: 50%;
+    padding-top: 100px;
+    padding-bottom: 0px;
+    height: fit-content;
+    display: flex;
+    position: relative;
+    top: 0;
+    /* border: 1px solid green; */
+    place-content: center;
+  }
+
+  .s3-mobile .cont0 .video img {
+    /* border: 1px solid blue; */
+    width: 95%;
+    height: 45%;
+    object-fit: contain;
+    object-position: center;
+    position: relative;
+  }
+
+  .s3-mobile .cont0 .txt {
+    display: flex;
+    width: 40%;
+    padding-bottom: 0px;
+    padding-top: 30px;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    height: fit-content;
+    flex-direction: column;
+    /* border: 1px solid green; */
+    position: relative;
+    top: 0;
+  }
+
+  .s3-mobile .cont0 .txt h1 {
+    margin-top: 10px;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 100;
+  }
+
+  .s3-mobile .cont0 .txt p {
+    margin-top: 20px;
+    /* border: 1px solid red; */
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .s3-mobile .cont0 .txt button {
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+    padding: 0.8em 2.5em 0.8em 2.5em;
+    font-size: 18px;
+    border: 2.5px solid transparent;
+    border-radius: 30px;
+    place-self: start;
+  }
+
+  .s3-mobile .cont0 .txt button:hover {
+    background: transparent !important;
+    border-color: white;
+    color: white;
+  }
+
+  .s3-mobile .work-mobile {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    padding-block: 50px;
+    padding-left: 40px;
+    place-content: center;
+    width: 90%;
+    height: fit-content;
+    place-self: center;
+    border-radius: 20px;
+    background: url(./images/work\ with\ us.jpg);
+    background-position-x: 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .s3-mobile .work-mobile::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0, 0.3);
+    position: absolute;
+    border-radius: 20px;
+    backdrop-filter: blur(1.2px);
+    z-index: -0;
+  }
+
+  .s3-mobile .work-mobile h1 {
+    /* border: 1px solid red; */
+    font-weight: 100;
+    font-size: 50px;
+    position: relative;
+  }
+
+  .s3-mobile .work-mobile p {
+    /* border: 1px solid red; */
+    width: 50%;
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 10px;
+    position: relative;
+  }
+
+  .s3-mobile .work-mobile button {
+    position: relative;
+    padding: 0.8em 1.5em 0.8em 1.5em;
+    transition: background-color 0.3s ease;
+    border: 2px solid transparent;
+    place-self: start;
+    font-size: 18px;
+    border-radius: 30px;
+  }
+
+  .s3-mobile .work-mobile button:hover {
+    background: transparent !important;
+    border: 2px solid white;
+    color: white;
+  }
+
+  .s3-mobile .newsletter-mobile {
+    padding-top: 40px;
+    /* border: 1px solid red; */
+    width: 100%;
+    background: #0b1321;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s3-mobile .newsletter-mobile h2 {
+    font-weight: 100;
+    place-self: center;
+  }
+
+  .s3-mobile .newsletter-mobile p {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    width: 90%;
+    font-size: 14px;
+    place-self: center;
+    text-align: center;
+    line-height: 25px;
+  }
+
+  .s3-mobile .newsletter-mobile input {
+    margin-top: 30px;
+    font-size: 14px;
+    place-self: center;
+    min-width: 70%;
+    padding-block: 1.2em;
+    text-align: center;
+    border: 2.5px solid #838e9e;
+    border-radius: 20px;
+    background: transparent;
+    outline: none;
+    color: #838e9e;
+    border-radius: 30px;
+  }
+
+  .s3-mobile .newsletter-mobile input:focus {
+    background: rgb(131, 142, 158, 0.3);
+    border-color: #8cefe9;
+  }
+
+  .s3-mobile .newsletter-mobile input:hover {
+    background: rgb(131, 142, 158, 0.3);
+    border-color: #8cefe9;
+  }
+
+  .s3-mobile .newsletter-mobile h5 {
+    scale: 0;
+    margin-top: 10px;
+    font-size: 16px;
+    color: rgb(7, 159, 7);
+    place-self: center;
+    font-weight: 100;
+  }
+
+  .s3-mobile .newsletter-mobile button {
+    min-width: 50%;
+    padding-block: 0.8em;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: background-color ease 0.3s;
+  }
+
+  .s3-mobile .newsletter-mobile button:hover {
+    background: white !important;
+    color: black !important;
+  }
+
+  .s3-mobile .footer {
+    margin-top: 60px;
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s3-mobile .footer::before {
+    content: "";
+    width: 90%;
+    height: 2px;
+    background-color: #838e9e;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  .s3-mobile .footer .cont1 {
+    display: none !important;
+    /* border: 1px solid red; */
+    width: 80%;
+    margin-top: 20px;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    place-self: center;
+  }
+
+  .s3-mobile .footer .cont1 h3 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .s3-mobile .footer .cont1 p {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+    /* border: 1px solid red; */
+    font-size: 14px;
+  }
+
+  .s3-mobile .footer .other-cont {
+    /* border: 1px solid red; */
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 90%;
+    place-self: center;
+  }
+
+  .s3-mobile .footer .other-cont .desktop-f {
+    display: flex !important;
+    margin-top: 0px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    place-items: start;
+    place-content: start;
+  }
+
+  .s3-mobile .footer .other-cont .desktop-f h3 {
+    place-self: start;
+    margin-top: 0px;
+    color: #8cefe9;
+  }
+
+  .s3-mobile .footer .other-cont .desktop-f p {
+    margin-top: 10px;
+    line-height: 25px;
+  }
+
+  .s3-mobile .footer .cont2 {
+    margin-top: 0px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    place-items: start;
+    place-content: start;
+  }
+
+  .s3-mobile .footer .cont2 h3 {
+    /* border: 1px solid blue; */
+    color: #838e9e;
+    font-size: 18px;
+    font-weight: 500;
+    place-self: start;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .s3-mobile .footer .cont2 p {
+    margin-top: 2px;
+    width: fit-content;
+    word-wrap: break-word;
+    cursor: pointer;
+    /* border: 1px solid red; */
+    font-size: 12px;
+  }
+
+  .s3-mobile .footer .cont2 .first-p {
+    margin-top: 10px;
+  }
+
+  .s3-mobile .footer h5 {
+    /* border: 1px solid red; */
+    width: 90%;
+    margin-block: 30px;
+    font-size: 12px;
+    font-weight: 100;
+    color: #838e9e;
+    place-self: center;
+    text-align: center;
+  }
+}
+
+@media (width <= 480px) {
+  button {
+    margin-top: 30px;
+    padding: 0.8em 3em 0.8em 3em;
+    place-self: center;
+    border-radius: 20px;
+    font-size: 14px;
+    color: black;
+    border: none;
+    background-color: #8cefe9;
+    cursor: pointer;
+    margin-right: 0px;
+    border: 2.5px solid transparent;
+    transition: background-color ease 0.2s;
+  }
+
+  nav {
+    display: flex;
+    /* border: 1px solid red; */
+    height: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 5px;
+    z-index: 10;
+    place-items: center;
+  }
+
+  nav .mobile {
+    display: flex;
+    place-items: center;
+    place-content: space-between;
+    /* border: 1px solid red; */
+    width: 100%;
+    padding-inline: 20px;
+  }
+
+  nav .mobile .logo {
+    display: flex;
+    place-items: center;
+    place-content: center;
+  }
+
+  nav .mobile img {
+    width: 60px;
+    animation: twist 5s infinite;
+    animation-direction: alternate-reverse;
+  }
+
+  nav .mobile h4 {
+    color: white;
+    font-size: 20px;
+    margin-left: 0px;
+  }
+
+  nav .mobile .dropdown {
+    /* border: 1px solid red; */
+    width: 5em;
+    height: 4.5em;
+    position: relative;
+    place-items: center;
+    place-content: center;
+    z-index: 1;
+  }
+
+  nav .mobile .dropdown::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #8cefe9;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: -1;
+  }
+
+  nav .mobile .dropdown i {
+    font-size: 35px;
+    margin-top: 0.27em;
+    margin-left: 0.35em;
+    cursor: pointer;
+  }
+
+  nav .mobile .dropdown-items{
+    display: none;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    width: 100%;
+    opacity: 0;
+    padding-top: 300px;
+    padding-inline: 18px;
+    gap: 15px;
+    background-color: #343D4D;
+    border-radius: 0px;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 230%;
+    right: 0px;
+    z-index: -1;
+    height: 150vh;
+  }
+  
+  nav .mobile .dropdown-items a{
+    font-size: 25px;
+    color: #fff;
+    place-self: center;
+  
+  }
+  
+  nav .mobile .dropdown-items a:hover{
+    color: #8cefe9;
+  }
+
+  .s0-mobile {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+  }
+
+  .s1-mobile {
+    width: 100%;
+    height: 100vh;
+    background: url(./images/background\ mobile\ s1.jpg);
+    background-color: rgba(24, 41, 52, 0.5);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 0px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    user-select: none;
+  }
+
+  .s1-mobile::-webkit-scrollbar {
+    display: none;
+  }
+
+  .s1-mobile .cont1 {
+    margin-top: 300px !important;
+    margin-right: 0px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    place-self: center;
+    place-items: center;
+  }
+
+  .s1-mobile .cont1 h1 {
+    /* border: 1px solid red; */
+    padding-top: 0px;
+    line-height: 40px;
+    font-size: 35px;
+    font-weight: 100;
+  }
+
+  .s1-mobile .cont1 p {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+    word-break: wrap;
+  }
+
+  .s1-mobile .cont1 button {
+    margin-top: 30px;
+    padding: 0.8em 3em 0.8em 3em;
+    place-self: center;
+    border-radius: 20px;
+    font-size: 14px;
+    color: black;
+    border: none;
+    background-color: #8cefe9;
+    cursor: pointer;
+    margin-right: 0px;
+    border: 2.5px solid transparent;
+    transition: background-color ease 0.2s;
+  }
+
+  .s1-mobile .cont1 button:hover {
+    border-color: white !important;
+    background-color: transparent;
+    color: white;
+  }
+
+  .s1-mobile .cont2 {
+    /* border: 1px solid red; */
+    margin-top: 350px;
+    margin-right: 0px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    place-content: start;
+    place-items: center;
+  }
+
+  .s1-mobile .cont2 h2 {
+    font-weight: 100;
+    font-size: 35px;
+    /* border: 1px solid red; */
+    place-self: center;
+  }
+
+  .s1-mobile .cont2 .card {
+    display: flex;
+    padding-block: 20px;
+    flex-direction: column;
+    margin-top: 20px;
+    border: 1.5px solid rgba(99, 109, 125, 0.4);
+    border-radius: 20px;
+    background-color: rgba(32, 39, 48, 0.5);
+  }
+
+  .s1-mobile .cont2 .card .video {
+    /* border: 1px solid green; */
+    display: flex;
+    place-self: center;
+    height: 15em;
+    width: 90%;
+    user-select: none;
+    pointer-events: none;
+    border-radius: 10px;
+  }
+
+  .s1-mobile .cont2 .card .video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+  }
+
+  .s1-mobile .cont2 .card h3 {
+    /* border: 1px solid red; */
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 30px;
+    color: white;
+    font-weight: 500;
+    width: fit-content;
+    place-self: center;
+  }
+
+  .s1-mobile .cont2 .card p {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    font-size: 16px;
+    margin-inline: 20px;
+    place-self: center;
+    text-align: center;
+  }
+
+  .s1-mobile .cont2 .card button {
+    margin-top: 30px;
+    margin-left: 25px;
+    padding: 12px 40px 12px 40px;
+    border-radius: 20px;
+    border: 2px solid #838e9e;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    place-self: center;
+  }
+
+  .s1-mobile .cont2 .card button:hover {
+    background-color: #8cefe9;
+    border-color: #8cefe9;
+    color: black;
+  }
+
+  .s1-mobile .cont3 {
+    margin-top: 350px;
+    margin-bottom: 170px;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    place-self: center;
+    place-items: center;
+    width: 93%;
+  }
+
+  .s1-mobile .cont3 .img {
+    /* border: 1px solid red; */
+    width: 23%;
+    height: 80px;
+    border-radius: 15px;
+    background-color: white;
+    padding: 3.5px;
+  }
+
+  .s1-mobile .cont3 .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    place-self: center;
+    border-radius: 15px;
+  }
+
+  .s1-mobile .cont3 h2 {
+    /* border: 1px solid rebeccapurple; */
+    margin-top: 15px;
+    place-self: center;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 100;
+    width: 100%;
+    line-height: 30px;
+  }
+
+  .s1-mobile .cont3 p {
+    margin-top: 15px;
+    place-self: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
+    word-wrap: break-word;
+  }
+
+
+  .s2-mobile {
+    /* border: 1px solid red; */
+    padding-top: 60px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    width: 100%;
+    background: url(./images/dragon\ head.jpg);
+    background-color: rgb(0, 0, 0, 0.2);
+    background-position: center;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    user-select: none;
+  }
+
+  .s2-mobile::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1px);
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+
+  .s2-mobile h2 {
+    font-weight: 100;
+    font-size: 30px;
+    position: relative;
+  }
+
+  .s2-mobile .all-cards {
+    padding-top: 40px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .s2-mobile .card1 {
+    margin-top: 0px;
+    width: 83%;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    position: relative;
+    padding: 20px;
+    padding-bottom: 30px !important;
+    background-color: rgb(35, 60, 77, 0.8);
+    box-shadow: rgb(0, 0, 0, 0.2) 0px 0px 2px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s2-mobile .card1 .overlay {
+    /* border: 1px solid red; */
+    width: 100%;
+    min-height: 20em;
+    background: url(./images/the\ unknown\ rpg\ bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s2-mobile .card1 .overlay::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    z-index: 0;
+  }
+
+  .s2-mobile .card1 .overlay .content {
+    display: flex;
+    /* border: 1px solid green; */
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    place-content: center;
+    border-radius: 20px;
+  }
+
+  .s2-mobile .card1 .overlay .content .img {
+    place-self: center;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    padding: 3px;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+  }
+
+  .s2-mobile .card1 .overlay .content img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+
+  .s2-mobile .card1 .overlay .content h4 {
+    font-size: 25px;
+    margin-top: 10px;
+    font-weight: 500;
+  }
+
+  .s2-mobile .card1 .overlay .content p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    color: white;
+    margin-top: 0px;
+  }
+
+  .s2-mobile .card1 h5 {
+    margin-top: 20px;
+    /* border: 1px solid red; */
+    width: 95%;
+    place-self: center;
+    text-align: center;
+    line-height: 25px;
+    font-size: 14px;
+    color: #838e9e;
+    font-weight: 100;
+    word-wrap: break-word;
+  }
+
+  .s2-mobile .card1 button {
+    margin-top: 20px !important;
+    padding: 0.8em 2.5em 0.8em 2.5em;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 100;
+    border: 2px solid transparent;
+    transition: background-color ease 0.2s;
+  }
+
+  .s2-mobile .card1 button:hover {
+    background: transparent;
+    color: white;
+    border: 2.5px solid white;
+  }
+
+  .s2-mobile .card2,
+  .card3 {
+    margin-top: 0px;
+  }
+
+  .s2-mobile .card2 .overlay {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 20em;
+    background: url(./images/dragon\ lair\ background.jpg);
+    background-size: cover;
+    background-position-y: -3px;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s2-mobile .card3 .overlay {
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 20em;
+    background: url(./images/Atactic\ background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s2-mobile .card3 {
+    margin-top: 0px;
+  }
+
+  .s2-mobile .about-us {
+    margin-left: 0px;
+    padding-top: 80px;
+    width: 90%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    place-self: center;
+    place-items: center;
+    position: relative;
+  }
+
+  .s2-mobile .about-us h1 {
+    font-weight: 100;
+  }
+  .s2-mobile .about-us p {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    word-wrap: break-word;
+    font-size: 14px;
+    text-align: center;
+    line-height: 25px;
+  }
+
+  .s2-mobile .about-us button {
+    margin-top: 30px;
+    font-size: 16px;
+    padding: 0.9em 2.5em 0.9em 2.5em;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    border: 1.5px solid rgb(255, 255, 255, 0);
+    place-self: center !important;
+  }
+
+  .s2-mobile .about-us button:hover {
+    background: transparent !important;
+    border: 1.5px solid white;
+    color: white;
+  }
+
+  .s3-mobile {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    position: relative;
+    background: #0b1321;
+    user-select: none;
+  }
+
+  .s3-mobile .cont0 {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    position: relative;
+  }
+
+  .s3-mobile .cont0::before {
+    display: none;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: url(./images/glow\ orb.png);
+    background-color: rgb(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .s3-mobile .cont0 .video::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: url(./images/glow\ orb.png);
+    background-color: rgb(0, 0, 0, 0.05);
+    background-blend-mode: darken;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .s3-mobile .cont0 .video {
+    padding-top: 0;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    position: relative;
+    top: 0;
+    /* border: 1px solid green; */
+    place-items: center;
+  }
+
+  .s3-mobile .cont0 .video img {
+    /* border: 1px solid blue; */
+    width: 93%;
+    height: 93%;
+    object-fit: contain;
+    object-position: center;
+    position: relative;
+  }
+
+  .s3-mobile .cont0 .txt {
+    padding-bottom: 0px;
+    margin-bottom: 60px;
+    display: flex;
+    width: 90%;
+    height: fit-content;
+    flex-direction: column;
+    /* border: 1px solid green; */
+    margin-left: 0px;
+    position: relative;
+    text-align: center;
+    place-self: center;
+  }
+
+  .s3-mobile .cont0 .txt h1 {
+    margin-top: 2px;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 100;
+  }
+
+  .s3-mobile .cont0 .txt p {
+    margin-top: 20px;
+    /* border: 1px solid red; */
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .s3-mobile .cont0 .txt button {
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+    padding: 0.8em 2.5em 0.8em 2.5em;
+    font-size: 14px;
+    border: 2.5px solid transparent;
+    border-radius: 30px;
+    place-self: center;
+  }
+
+  .s3-mobile .cont0 .txt button:hover {
+    background: transparent !important;
+    border-color: white;
+    color: white;
+  }
+
+  .s3-mobile .work-mobile {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
+    padding-block: 50px;
+    padding-left: 0px;
+    place-content: center;
+    width: 90%;
+    height: fit-content;
+    place-self: center;
+    border-radius: 20px;
+    background: url(./images/work\ with\ us.jpg);
+    background-position-x: -70px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .s3-mobile .work-mobile::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0, 0.3);
+    position: absolute;
+    border-radius: 20px;
+    backdrop-filter: blur(1.2px);
+    z-index: -0;
+  }
+
+  .s3-mobile .work-mobile h1 {
+    /* border: 1px solid red; */
+    width: 100%;
+    font-weight: 100;
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+  }
+
+  .s3-mobile .work-mobile p {
+    /* border: 1px solid red; */
+    width: 80%;
+    font-size: 14px;
+    line-height: 30px;
+    margin-top: 10px;
+    position: relative;
+    text-align: center;
+    place-self: center;
+  }
+
+  .s3-mobile .work-mobile button {
+    position: relative;
+    padding: 0.8em 1.5em 0.8em 1.5em;
+    transition: background-color 0.3s ease;
+    border: 2.5px solid transparent;
+    place-self: center;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+
+  .s3-mobile .work-mobile button:hover {
+    background: transparent !important;
+    border: 2.5px solid white;
+    color: white;
+  }
+
+  .s3-mobile .newsletter-mobile {
+    padding-top: 40px;
+    /* border: 1px solid red; */
+    width: 100%;
+    background: #0b1321;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s3-mobile .newsletter-mobile h2 {
+    font-weight: 100;
+    place-self: center;
+  }
+
+  .s3-mobile .newsletter-mobile p {
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    width: 90%;
+    font-size: 14px;
+    place-self: center;
+    text-align: center;
+    line-height: 25px;
+  }
+
+  .s3-mobile .newsletter-mobile input {
+    margin-top: 30px;
+    font-size: 14px;
+    place-self: center;
+    min-width: 90%;
+    padding-block: 1.2em;
+    text-align: center;
+    border: 2.5px solid #838e9e;
+    border-radius: 20px;
+    background: transparent;
+    outline: none;
+    color: #838e9e;
+    border-radius: 30px;
+  }
+
+  .s3-mobile .newsletter-mobile input:focus {
+    background: rgb(131, 142, 158, 0.3);
+    border-color: #8cefe9;
+  }
+
+  .s3-mobile .newsletter-mobile input:hover {
+    background: rgb(131, 142, 158, 0.3);
+    border-color: #8cefe9;
+  }
+
+  .s3-mobile .newsletter-mobile h5 {
+    scale: 0;
+    margin-top: 10px;
+    font-size: 16px;
+    color: rgb(7, 159, 7);
+    place-self: center;
+    font-weight: 100;
+  }
+
+  .s3-mobile .newsletter-mobile button {
+    min-width: 90%;
+    padding-block: 0.8em;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: background-color ease 0.3s;
+  }
+
+  .s3-mobile .newsletter-mobile button:hover {
+    background: white !important;
+    color: black !important;
+  }
+
+  .s3-mobile .footer {
+    margin-top: 60px;
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s3-mobile .footer::before {
+    content: "";
+    width: 90%;
+    height: 2px;
+    background-color: #838e9e;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  .s3-mobile .footer .cont1 {
+    display: block !important;
+    /* border: 1px solid red; */
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    place-self: center;
+  }
+
+  .s3-mobile .footer .cont1 h3 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .s3-mobile .footer .cont1 p {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    word-wrap: break-word;
+    /* border: 1px solid red; */
+    font-size: 14px;
+  }
+
+  .s3-mobile .footer .other-cont {
+    /* border: 1px solid red; */
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 90%;
+    place-self: center;
+  }
+
+  .s3-mobile .footer .other-cont .desktop-f {
+    display: none !important;
+    margin-top: 0px;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    place-items: start;
+    place-content: start;
+  }
+
+  .s3-mobile .footer .other-cont .desktop-f h3 {
+    margin-top: 10px;
+    color: #8cefe9;
+  }
+
+  .s3-mobile .footer .other-cont .desktop-f p {
+    margin-top: 20px;
+    line-height: 25px;
+  }
+
+  .s3-mobile .footer .cont2 {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+  }
+
+  .s3-mobile .footer .cont2 h3 {
+    color: #838e9e;
+    font-size: 25px;
+    font-weight: 500;
+    place-self: center;
+  }
+
+  .s3-mobile .footer .cont2 p {
+    margin-top: 2px;
+    width: fit-content;
+    word-wrap: break-word;
+    cursor: pointer;
+    /* border: 1px solid red; */
+    font-size: 14px;
+  }
+
+  .s3-mobile .footer .cont2 .first-p {
+    margin-top: 10px;
+  }
+
+  .s3-mobile .footer h5 {
+    /* border: 1px solid red; */
+    width: 90%;
+    margin-block: 30px;
+    font-size: 14px;
+    font-weight: 100;
+    color: #838e9e;
+    place-self: center;
+    text-align: center;
+  }
+}
